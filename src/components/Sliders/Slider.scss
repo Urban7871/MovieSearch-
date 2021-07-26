@@ -1,0 +1,89 @@
+.sliderWrapper{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide {
+   width: 15vw;
+   margin-right: 2.5vw;
+   margin-left: 2.5vw;
+   transition: all .3s;
+}
+
+.title{
+   height: 35px;
+}
+
+.poster{
+    width: 100%;
+}
+
+.slideShow{
+    display: flex;
+    transition: all .5s ease;
+}
+
+.slideButton {
+    position: absolute;
+    top: 50%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(256, 256, 256, .6);
+    font-size: 30px;
+    transition: all .4s ease;
+
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        transition: all .4s ease;
+    }
+}
+
+.next{
+    right: 0;
+}
+.prev{
+    left: 0px;
+    z-index: 1000;
+}
+
+.poster {
+    border-radius: 20px;
+}
+
+.slide{
+
+    &:first-child{
+        margin-left: 1.5vw;
+
+        @media(max-width: 1000px) {
+            margin-left: 3.5vw;
+        }
+    }
+    
+    @media (max-width: 1000px) {
+        width: 25vw;
+        margin-right: 4vw;
+        margin-left: 4vw;
+    }
+}
+
+.under4{
+    background-color: red;
+    width: 40%;
+    height: 2px;
+}
+
+.over4 {
+    background-color: yellow;
+    width: 60%;
+    height: 2px;
+}
+
+.over7{
+    background-color: green;
+    width: 90%;
+    height: 2px;
+}

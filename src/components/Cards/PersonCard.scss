@@ -1,0 +1,62 @@
+
+.personCard {
+    height: 40%;
+
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(175, 175, 175, 0.815);
+    height: 17.5rem;
+
+    a{
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: rgb(0, 0, 116);
+        }
+    }
+
+    .imageSection{
+        
+        img{
+            width: 8rem;
+            margin-left: .5rem;
+        }
+    }
+
+    .overviewSection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+
+        .aboutSec{
+            width: 30vw;
+            display: flex;
+            justify-content: flex-start;
+            .overviewEl{
+                margin-right: 2rem;
+            }
+        }
+
+        .moviesSec{
+            width: 30vw;
+            display: flex;
+            justify-content: space-between;
+            
+            .moviesKnownFor {
+                display: flex;
+                width: 90%;
+                justify-content: space-between;
+                margin-left: .2rem;
+
+                
+            }
+        }
+    }
+}
+
+.displayNone{
+    display: none;
+}

@@ -1,0 +1,55 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    background-color: rgba($color: #95b8e0, $alpha: .7);
+
+
+    a{
+        color: rgb(61, 61, 61);
+        text-decoration: none;
+    }
+
+    &_links {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 70%;
+
+        h2{
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .list{
+            margin-right: 2rem;
+
+            &_items{
+                display: none;
+            }
+
+        }
+
+        .list:hover{
+
+            .list_items{
+                display: block;
+                position: fixed;
+                top: 50px;
+                left: 10%;
+
+                &__tv{
+                    left: 15%;
+                }
+            }
+        }
+        
+        
+    }
+
+    &_search{
+        margin-right: 1rem;
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,56 @@
+.imgSection{
+
+    &_genres{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    &_title{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .movieImage {
+        border-radius: 2rem;
+    }
+}
+
+.moviesWrapper {
+
+    .bioSection{
+    }
+    
+    .bioSectionMovie{
+        justify-content: flex-start !important;
+    }
+}
+
+.castWrapper {
+    margin-left: 5rem;
+    display: grid;
+    grid-template-columns: repeat(6, 16%);
+
+
+    .credit_name {
+        height: 5rem;
+
+        a{
+            text-decoration: none;
+            color: black;
+
+            &:hover{
+                color: rgb(0, 0, 116);
+            }
+        }
+    }
+    .memberImage {
+        width: 100px; 
+        border-radius: .6rem;
+    }
+}
+
+.iframe_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

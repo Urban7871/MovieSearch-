@@ -1,0 +1,45 @@
+.upcomingWrapper {
+    background-color: rgba($color: #95b8e0, $alpha: .7);
+    padding-bottom: 30px;
+
+    .slideLarge{
+        width: 100vw;
+
+        .poster{
+            width: 200px !important;
+        }
+        img{
+            margin-right: 2rem;
+        }
+
+        p{
+            margin-right: 2rem;
+        }
+    }
+
+    .slide{
+        width: 50vw;
+    }
+        .posterWrapper{
+            display: flex;
+            img{
+                width: 300px;
+                margin-right: 2rem;
+            }
+        }
+
+        .flexColumn {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ratingWrapper{
+            border: 1px solid rgb(0, 190, 0);
+            border-radius: 10000px;
+            width: 50px;
+
+            p{
+                transform: translateX(15px);
+            }
+        }
+}
