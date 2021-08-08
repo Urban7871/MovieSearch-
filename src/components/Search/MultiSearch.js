@@ -25,8 +25,10 @@ const MultiSearch = ({ query, setQuery }) => {
 
     return(
         <form onSubmit={onFormSubmit}>
-            <input value={input} onChange={onInputChange} />
-            <button><BiSearchAlt2 /></button>
+            <input value={input} onChange={onInputChange} 
+            style={{height: '1rem'}}/>
+            <button><BiSearchAlt2 
+            style={{height: '.7rem'}}/></button>
         </form>
     )
     

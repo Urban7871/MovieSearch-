@@ -1,3 +1,13 @@
+.background_image {
+    height: 65vh;
+    width: 97.9vw;
+    transform: translateY(-5rem);
+    object-fit: cover;
+    object-position: 0 -50px;
+}
+.mainWrapper{
+    transform: translateY(-5rem);
+}
 .imgSection{
 
     &_genres{

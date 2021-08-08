@@ -1,15 +1,13 @@
-.header {
+
+.header,
+.header2 {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 5rem;
-    background-color: rgba($color: #95b8e0, $alpha: .7);
-
-
-    a{
-        color: rgb(61, 61, 61);
-        text-decoration: none;
-    }
 
     &_links {
         display: flex;
@@ -24,15 +22,16 @@
 
         .list{
             margin-right: 2rem;
-
+            
             &_items{
                 display: none;
             }
-
+            
         }
-
+        
         .list:hover{
-
+            list-style: none;
+            
             .list_items{
                 display: block;
                 position: fixed;
@@ -51,5 +50,24 @@
     &_search{
         margin-right: 1rem;
         margin-left: auto;
+        height: 1rem;
+    }
+}
+
+.header2{
+    background-color: black;
+    height: 3rem;
+    
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.header{
+    background-color: rgba($color: #525252, $alpha: .1);
+    a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
     }
 }

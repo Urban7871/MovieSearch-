@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import MultiSearch from '../Search/MultiSearch';
 import useApiRequest from '../useApiRequest';
@@ -7,8 +7,25 @@ import './Header.scss'
 
 const Header = ({ query, setQuery }) => {
 
+    const [header, setHeader] = useState("header")
+
+    const listenScrollEvent = (event) => {
+      if (window.scrollY < 401) {
+        return setHeader("header")
+      } else if (window.scrollY > 400.99) {
+        return setHeader("header2")
+      } 
+    }
+
+    useEffect(() => {
+      window.addEventListener('scroll', listenScrollEvent);
+
+      return () =>
+        window.removeEventListener('scroll', listenScrollEvent);
+    }, []);
+    
     return (
-    <div className='header'>  
+    <div className={header}>  
         <div className='header_links'>
         <h2>
             <Link to='/'>

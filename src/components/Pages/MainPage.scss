@@ -1,0 +1,36 @@
+.wrapper{
+    height: 65vh;
+    width: 97.9vw;
+    transform: translateY(-5rem);
+    a{
+        text-decoration: none;
+    }
+
+    
+    .background {
+        height: inherit;
+        width: inherit;
+        display: flex;
+        justify-content: center;
+       
+        &_img {
+            height: inherit;
+            width: inherit;
+            object-fit: cover;
+            object-position: 0 -75px;
+        }
+        &_title{
+            transform: translateY(-4rem);
+            color: white;
+            background-color: rgba(53, 53, 53, 0.192);
+            width: 20rem;
+            
+        }
+    }
+}
+
+main{
+    transform: translateY(-6rem);
+    margin-left: 8rem;
+    margin-right: 8rem;
+}

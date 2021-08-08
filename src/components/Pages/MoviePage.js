@@ -2,6 +2,7 @@ import { assertExpressionStatement } from '@babel/types';
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import RenderCredits from '../Render/RenderCredits';
+import RenderSimilar from '../Render/RenderSimilar';
 import RenderStaff from '../Render/RenderStaff';
 import RenderTrailer from '../Render/RenderTrailer';
 
@@ -56,9 +57,19 @@ const MoviePage = () => {
         }
     }
 
+    const renderBackground = (data) => {
+        if(data === null) {
+            return <div>Loading...</div>
+        } else {
+            return <img className='background_image' src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`} /> 
+        }
+    }
+
 
     if(data !== null) {
         return(
+            <div>
+            {renderBackground(data)}
         <div className='mainWrapper moviesWrapper'>
             <div className='imgSection'>
             <div className='imgSection_title'>
@@ -80,6 +91,10 @@ const MoviePage = () => {
                 <RenderCredits id={id}/>
                 <RenderStaff id={id} />
             </div>
+        </div>
+        <div className='similar'>
+            <RenderSimilar id={id} />
+        </div>
         </div>
     )
 } else {

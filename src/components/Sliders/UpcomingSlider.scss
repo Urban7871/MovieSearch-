@@ -1,9 +1,13 @@
 .upcomingWrapper {
-    background-color: rgba($color: #95b8e0, $alpha: .7);
     padding-bottom: 30px;
+    width: 100%;
 
     .slideLarge{
-        width: 100vw;
+        width: 99.5vw;
+        
+        &:first-of-type {
+            margin-left: 1rem;
+        }
 
         .poster{
             width: 200px !important;
@@ -42,4 +46,16 @@
                 transform: translateX(15px);
             }
         }
+}
+.upcomingSlide{
+    margin: 0;
+    padding: 0;
+    transform: translateX(-1rem);
+}
+
+.slide,
+.slideLarge{
+    background-repeat: none !important;
+    background-position: center !important;
+    background-size: cover;
 }

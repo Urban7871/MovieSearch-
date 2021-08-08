@@ -20,9 +20,9 @@ const UpcomingSlider = () => {
 
     const generateClass = () => {
         if(window.innerWidth < 1000) {
-            return 'slideLarge'
+            return 'slideLarge upcomingSlide'
         } else {
-            return 'slide'
+            return 
         }
     }
 
@@ -37,7 +37,10 @@ const UpcomingSlider = () => {
             return(
                 upcoming.map(movie => {
                     return(
-                        <div key={movie.id} className={generateClass()}>
+                        <div key={movie.id} className='slideLarge upcomingSlide'
+                        style={{backgroundImage: `linear-gradient(#95b8e0d7, #4b91e0d2), 
+                        url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`}}
+                        >
                             <Link to={`/movie/${movie.id}`}>
                             <h2 className='title'>{movie.original_title}</h2>
                             </Link>
@@ -62,9 +65,14 @@ const UpcomingSlider = () => {
 
     return(
         <div className='upcomingWrapper'>
-            <Slider sliderTitle='Now playing' renderSlide={renderSlide} transform={transform} setTransform={setTransform}
-            transformValue={55} times={18} 
-            multiplier={1.818}/>
+            <Slider sliderTitle='Now playing'
+                renderSlide={renderSlide}
+                transform={transform} 
+                setTransform={setTransform}
+                transformValue={99.5}
+                times={18} 
+                multiplier={1}
+                />
         </div>
     )
 }
