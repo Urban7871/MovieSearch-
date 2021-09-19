@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useApiRequest from '../useApiRequest';
+import useApiRequest from '../../useApiRequest';
 
 const RenderTrailer = ({ id }) => {
     const { data, isLoaded, error } = useApiRequest(`/movie/${id}/videos`);

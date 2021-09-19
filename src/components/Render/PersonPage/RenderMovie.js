@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useApiRequest from '../useApiRequest';
+import useApiRequest from '../../useApiRequest';
 
 const RenderMovie = ({ id }) => {
     const {data, isLoaded, error } = useApiRequest(`person/${id}/movie_credits`)

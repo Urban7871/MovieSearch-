@@ -41,8 +41,11 @@ const PopularSlider = () => {
                 data.results.map(movie => {
                     return(
                         <div key={movie.id} className='slide'>
-                            <Link to={`/movie/${movie.id}`}>
-                            <h2 className='title'>{movie.original_title}</h2>
+                            <Link to={`/movie/${movie.id}`}
+                            style={{ textDecoration: 'none' }}>
+                            <h2 className='title'
+                            style={{color: 'black'}}>
+                                {movie.original_title}</h2>
                             </Link>
                             <div>
                             <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={movie.title}

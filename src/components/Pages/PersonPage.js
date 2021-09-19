@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import RenderTv from '../Render/RenderTv';
-import RenderMovie from '../Render/RenderMovie';
+import RenderTv from '../Render/PersonPage/RenderTv';
+import RenderMovie from '../Render/PersonPage/RenderMovie';
 import useApiRequest from '../useApiRequest';
 
 import './PersonPage.scss'
@@ -48,9 +48,7 @@ const PersonPage = () => {
         return(
             <div className='mainWrapper'>
               <div className='imgSection'>
-                <h2 className='name'>
-                    {data.name}
-                </h2>
+                
                 {renderImg(data)}
                 <p style={{display: 'flex'}}>
                     {data.birthday}  {renderDeathday(data)}
@@ -64,9 +62,11 @@ const PersonPage = () => {
                 </a>
               </div>
               <div className='bioSection'>
+              <h2 className='name'>
+                    {data.name}
+                </h2>
                   <p>{data.biography}</p>
                     <div className='knownFor'>
-                        <h2>Known For:</h2>
                         <h3>Movies</h3>
                     <div className='movies'>
                       <RenderMovie id={id}/>

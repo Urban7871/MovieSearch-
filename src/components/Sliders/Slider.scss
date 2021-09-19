@@ -27,12 +27,13 @@
 
 .slideButton {
     position: absolute;
-    top: 50%;
+    top: 45%;
     border: none;
     background-color: rgba(0, 0, 0, 0.2);
     color: rgba(256, 256, 256, .6);
     font-size: 30px;
     transition: all .4s ease;
+    cursor: pointer;
 
     &:hover{
         background-color: rgba(0, 0, 0, 0.4);

@@ -31,12 +31,14 @@
         
         .list:hover{
             list-style: none;
+
             
             .list_items{
                 display: block;
                 position: fixed;
                 top: 50px;
                 left: 10%;
+                background-color: rgba($color: #838383, $alpha: .1);
 
                 &__tv{
                     left: 15%;
@@ -57,15 +59,41 @@
 .header2{
     background-color: black;
     height: 3rem;
+
+    .list:hover{
+        list-style: none;
+
+        
+        .list_items{
+            display: block;
+            position: fixed;
+            top: 30px;
+            left: 10%;
+            background-color: rgba($color: #000000, $alpha: 1);
+            color: white;
+
+            &__tv{
+                left: 15%;
+            }
+        }
+    }
+    h4{
+        color: white;
+    }
     
     a{
         text-decoration: none;
         color: white;
     }
+
+
 }
 
 .header{
     background-color: rgba($color: #525252, $alpha: .1);
+    h4{
+        color: white;
+    }
     a{
         color: rgb(255, 255, 255);
         text-decoration: none;

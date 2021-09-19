@@ -4,28 +4,12 @@ import MultiSearch from '../Search/MultiSearch';
 import useApiRequest from '../useApiRequest';
 
 import './Header.scss'
+import './HeaderBlack.scss'
 
-const Header = ({ query, setQuery }) => {
-
-    const [header, setHeader] = useState("header")
-
-    const listenScrollEvent = (event) => {
-      if (window.scrollY < 400) {
-        return setHeader("header")
-      } else if (window.scrollY > 400) {
-        return setHeader("header2")
-      } 
-    }
-
-    useEffect(() => {
-      window.addEventListener('scroll', listenScrollEvent);
-
-      return () =>
-        window.removeEventListener('scroll', listenScrollEvent);
-    }, []);
+const HeaderBlack = ({ query, setQuery }) => {
     
     return (
-    <div className={header}>  
+    <div className='header2'>  
         <div className='header_links'>
         <h2>
             <Link to='/' style={{color: 'white'}}>
@@ -59,13 +43,13 @@ const Header = ({ query, setQuery }) => {
                     <Link to='/tv'>
                     <li>Popular</li>
                     </Link>
-                    <Link to='/tv/top_voted/1'>
+                    <Link to='/tv/top_voted'>
                     <li>Top Voted</li>
                     </Link>
-                    <Link to='/tv/upcoming/1'>
+                    <Link to='/tv/upcoming'>
                     <li>Upcoming</li>
                     </Link>
-                    <Link to='/tv/now_playing/1'>
+                    <Link to='/tv/now_playing'>
                     <li>Now Playing</li>
                     </Link>
                 </ul>
@@ -78,4 +62,4 @@ const Header = ({ query, setQuery }) => {
     </div>
 )}
 
-export default Header
+export default HeaderBlack

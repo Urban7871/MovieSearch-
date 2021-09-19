@@ -1,10 +1,10 @@
 import { assertExpressionStatement } from '@babel/types';
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import RenderCredits from '../Render/RenderCredits';
-import RenderSimilar from '../Render/RenderSimilar';
-import RenderStaff from '../Render/RenderStaff';
-import RenderTrailer from '../Render/RenderTrailer';
+import RenderCredits from '../Render/SingleMoviePage/RenderCredits';
+import RenderSimilar from '../Render/SingleMoviePage/RenderSimilar';
+import RenderStaff from '../Render/SingleMoviePage/RenderStaff';
+import RenderTrailer from '../Render/SingleMoviePage/RenderTrailer';
 
 import useApiRequest from '../useApiRequest';
 
@@ -15,6 +15,7 @@ const MoviePage = () => {
     const {id} = useParams();
 
     const {data, isLoaded, error} = useApiRequest(`movie/${id}`);
+    const [check, setCheck] = useState(false);
 
     const renderImg = (data) => {
         if(data.poster_path === null) {
@@ -92,8 +93,19 @@ const MoviePage = () => {
                 <RenderStaff id={id} />
             </div>
         </div>
-        <div className='similar'>
-            <RenderSimilar id={id} />
+        <h3 
+        style={{marginLeft: '11rem'}}>Similar Movies</h3>
+        <div className='similar_wrapper'>
+            <RenderSimilar id={id} checked={check}/>
+        </div>
+
+        <div className='mb1'>
+        <label className='loadMore'>
+        <input type='checkbox' checked={check}
+        onClick={() => setCheck(!check)} 
+        className='loadMore loadMore_check'/>
+        Load More...
+        </label>
         </div>
         </div>
     )

@@ -19,6 +19,25 @@
         p{
             margin-right: 2rem;
         }
+
+        .flexColumn {
+            width: 60vw;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            transition: all .4s ease;
+
+            &:hover {
+                color: rgb(0, 0, 122);
+                transition: all .4s ease;
+            }
+        }
+        .title{
+            margin-left: 1rem;
+
+        }
     }
 
     .slide{
@@ -28,7 +47,8 @@
             display: flex;
             img{
                 width: 300px;
-                margin-right: 2rem;
+                margin: 0 2rem 1rem 1rem;
+
             }
         }
 

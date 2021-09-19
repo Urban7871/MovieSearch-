@@ -25,6 +25,7 @@
     }
 }
 
+
 .moviesWrapper {
 
     .bioSection{
@@ -63,4 +64,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.similar_wrapper{
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-bottom: 1rem;
+}
+
+.loadMore{
+    width: 15rem;
+    height: 2rem;
+    position: absolute;
+    left: 42vw;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    text-align: center;
+    transition: all .6s ease;
+
+    &:hover{
+        background-color: black;
+        color: white;
+        transition: all .6s ease;
+        border: 1px solid white;
+    }
+
+    &_check{
+        display: none;
+    }
 }
